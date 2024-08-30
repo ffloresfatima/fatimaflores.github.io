@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--==================== UNICONS ====================-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <link rel="icon" href="favicon.ico">
+
+  <!--==================== CSS ==========-->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Fatima's Portfolio</title>
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">fatimaFlores();</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a href="#" class="nav__link active-link" onclick="showSection('home')">
+              <i class="uil uil-estate nav__icon"></i> Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link" onclick="showSection('about')">
+              <i class="uil uil-user nav__icon"></i> About
+            </a>
+          </li>
+
+
+          <li class="nav__item">
+            <a href="#" class="nav__link" onclick="showSection('skills')">
+              <i class="uil uil-file-alt nav__icon"></i> Projects
+            </a>
+          </li>
+
+         
+          <li class="nav__item">
+          <a href="https://drive.google.com/file/d/1piuESmpgJaZwXATNii6UhiymBa4-M8Vz/view?usp=sharing" class="nav__link" target="_blank"> 
+              <i class="uil uil-message nav__icon"></i> Resume
+            </a>
+          </li>
+          
+
+        </ul>
+
+        <i class="uil uil-times nav__close" id="nav-close"></i>
+      </div>
+
+      <div class="nav__btns">
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__content grid">
+          <div class="home__social">
+            <a href="https://www.linkedin.com/in/fatima-flores-78239028b" target="_blank" class="home__social-icon">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a href="https://github.com/ffloresfatima" target="_blank" class="home__social-icon">
+              <i class="uil uil-github-alt"></i>
+            </a>
+          </div>
+
+          <div class="home__img">
+            <svg class="home__blob" viewBox="0 0 200 187">
+              <mask id="mask0" mask-type="alpha">
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+              </mask>
+              <g mask="url(#mask0)">
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+
+
+                <image class="home__blob-img" x="-2" y="-7" xlink:href="img1.png" />
+
+              </g>
+            </svg>
+          </div>
+
+          <div class="home__data">
+            <h1>Hello World! I'm <br><span class="input"></span></h1>
+            <p class="home__description">Welcome to my personal website!👋 My name is Fatima Flores and I am pursuing a degree in Computer Science at the University of Southern California. </p>
+
+          </div>
+        </div>
+
+        <div class="main-text">
+        </div>
+      </section>
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+          var typed = new Typed(".input", {
+              strings:["a student" ," a developer"],
+              typeSpeed:120,
+              backSpeed:110,
+              loop:true,
+          })
+      </script>
+        </div>
+    </section>
+  </main>
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Your head content here -->
+</head>
+
+<body>
+  <!-- Your HTML content here -->
+
+  <script>
+    function showSection(sectionId) {
+  // Hide all sections
+  var sections = document.querySelectorAll('.section');
+  sections.forEach(function(section) {
+    section.style.display = 'none';
+  });
+
+  // Show the clicked section
+  var sectionToShow = document.getElementById(sectionId);
+  if (sectionToShow) {
+    sectionToShow.style.display = 'block';
+
+    // Update active state of navigation links
+    var navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(function(link) {
+      link.classList.remove('active-link');
+    });
+
+    // Find the corresponding navigation link and add active class
+    var activeNavLink = document.querySelector(`.nav__link[href="#${sectionId}"]`);
+    if (activeNavLink) {
+      activeNavLink.classList.add('active-link');
+    }
+  }
+}
+  </script>
+</body>
+
+</html>
+
+
+<section class="about section" id="about">
+  <div class="about__container container grid">
+    <div class="about__text">
+      <h2 class="section__title about__title">About Me!</h2>
+      <p class="about__description"> Hi! My name is Fatima Flores I was born and raised in Los Angeles California and a first-gen Latina attending the University of Southern California. Beyond being interested in data analytics, mobile app development or full stack engineering, I aim to help bridge the gap of Latinas who are going into STEM fields and Computer Science. While also supporting the youth in my community to obtaining a degree in STEM through my extracurriculars. In my free time I absolutely love baking, exploring new coffee shops, cycling and going to concerts! </p>
+    </div>
+    <div class="about__image-container">
+      <img src="me.jpg" alt="Fatima Flores" class="about__image">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="skills section" id="skills">
+  <div class="skills__container container grid">
+    <div class="skills__data">
+      <h2 class="section__title skills__title">Under Construction 🚧</h2>
+    </div>
+  </div>
+</section>
+
